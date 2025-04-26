@@ -1,0 +1,83 @@
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment {
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    width: 80%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.comment>* {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.comment-name::after {
+    content: ":";
+}
+
+.comment-time {
+    font-style: italic;
+    color: #404040;
+}
+
+.comment-time::before {
+    content: "Posted ";
+}
+
+/* Styling for comments form: */
+.comment-form-header {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 50%;
+    margin: 0 auto;
+}
+
+.post-form>* {
+    margin-top: 0.5rem;
+}
+
+.post-form label {
+    font-size: 1.25rem;
+}
+
+.name-row {
+    display: flex;
+    width: 100%;
+}
+
+#name {
+    flex: 1;
+    margin-left: 1rem;
+    height: 1.25rem;
+}
+
+.comment-text-label {
+    text-align: start;
+    width: 100%;
+}
+
+#text {
+    width: 100%;
+}
+
+.comment-submit {
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    font-size: 1.5rem;
+}
+

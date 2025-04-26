@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag "index" %>
+<h1>Comment Box</h1>
+<div class="comments-list">
+    <% @comments.each do |comment| %>
+        <div class="comment">
+            <h3 class="comment-name"><%= comment.name %></h3>
+            <p class="comment-text"><%= comment.text %></p>
+            <div class="comment-time"><%= comment.create_time.to_s %></div>
+        </div>
+    <% end %>
+</div>
+<h2 class="comment-form-header">Leave A Comment</h2>
+<%= form_with url: "/comments", class: "post-form" do |form| %>
+    <div class="name-row">
+        <%= form.label :name, "Name: ", class: "comment-name-label" %>
+        <%= form.text_field :name %>
+    </div>
+    <%= form.label :text, "Comment: ", class: "comment-text-label" %>
+    <%= form.text_area :text, rows: 7 %>
+    <%= form.submit "Post", class: "comment-submit" %>
+<% end %>

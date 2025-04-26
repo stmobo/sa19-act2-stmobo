@@ -1,0 +1,8 @@
+<%= stylesheet_link_tag "post_error" %>
+
+<h1>Could not post comment:</h1>
+<ul>
+    <% @comment.errors.full_messages.each do |msg| %>
+        <li class="create-error"><%= msg %></li>
+    <% end %>
+</ul>
